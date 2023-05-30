@@ -144,19 +144,35 @@
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-<!--      <div class="column is-four-fifths">-->
-        <div class="column">
-        <h2 class="title is-3">Abstract</h2>
-        <img src="static/images/abstract.png" class="image is-center" alt="Abstract" /> <br>
-        <div class="content has-text-justified">
-          <p>
-            Digital holography (DH) is a powerful imaging modality that is capable of capturing the object wavefront information, making it very valuable for diverse scientific research applications. Generally, it requires ample illumination to enable good fringe visibility and a sufficient signal-to-noise ratio. As such, in situations such as probing live cells with minimal light interaction and high-speed volumetric tracking in flow cytometry, the holograms generated with a limited photon budget suffer from poor pattern visibility. While it is possible to make use of photon-counting detectors to improve the hologram quality, the long recording procedure coupled with the need for mechanical scanning means that real-time extremely low light holographic imaging remains a formidable challenge. Here, we develop a snapshot DH that can operate at an ultra-low photon level (less than one photon per pixel). This is achieved by leveraging a quanta image sensor to capture a stack of binary holographic frames and then computationally reconstructing the wavefront  through integrating the mathematical imaging model and the data-driven processing, an approach that we termed PSHoloNet. The robustness and versatility of our DH system are demonstrated on both synthetic and experimental holograms with two common DH tasks, namely, particles volumetric reconstruction and phase imaging. Our results demonstrate that it is possible to expand DH to the photon-starved regime, and our method will enable more advanced holography applications in various scientific imaging systems.
-          </p>
-        </div>
-      </div>
+<!--  <div class="hero-body">-->
+    <h2 class="title is-2 has-text-centered">Abstract</h2>
+    <video poster="" id="illustration" autoplay muted loop height="200%">
+      <source src="static/videos/illuatration.mov" type="video/mp4">
+    </video>
+    <div class="content has-text-justified">
+      <p>
+        Digital holography (DH) is a powerful imaging modality that is capable of capturing the object wavefront information, making it very valuable for diverse scientific research applications. Generally, it requires ample illumination to enable good fringe visibility and a sufficient signal-to-noise ratio. As such, in situations such as probing live cells with minimal light interaction and high-speed volumetric tracking in flow cytometry, the holograms generated with a limited photon budget suffer from poor pattern visibility. While it is possible to make use of photon-counting detectors to improve the hologram quality, the long recording procedure coupled with the need for mechanical scanning means that real-time extremely low light holographic imaging remains a formidable challenge. Here, we develop a snapshot DH that can operate at an ultra-low photon level (less than one photon per pixel). This is achieved by leveraging a quanta image sensor to capture a stack of binary holographic frames and then computationally reconstructing the wavefront  through integrating the mathematical imaging model and the data-driven processing, an approach that we termed PSHoloNet. The robustness and versatility of our DH system are demonstrated on both synthetic and experimental holograms with two common DH tasks, namely, particles volumetric reconstruction and phase imaging. Our results demonstrate that it is possible to expand DH to the photon-starved regime, and our method will enable more advanced holography applications in various scientific imaging systems.
+      </p>
     </div>
+<!--  </div>-->
   </div>
+
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--&lt;!&ndash;      <div class="column is-four-fifths">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="column">&ndash;&gt;-->
+<!--        <h2 class="title is-3">Abstract</h2>-->
+<!--&lt;!&ndash;        <img src="static/images/abstract.png" class="image is-center" alt="Abstract" /> <br>&ndash;&gt;-->
+<!--&lt;!&ndash;          <video src="static/videos/illuatration.mov" autoplay loop> <br>&ndash;&gt;-->
+
+<!--        <div class="content has-text-justified">-->
+<!--          <p>-->
+<!--            Digital holography (DH) is a powerful imaging modality that is capable of capturing the object wavefront information, making it very valuable for diverse scientific research applications. Generally, it requires ample illumination to enable good fringe visibility and a sufficient signal-to-noise ratio. As such, in situations such as probing live cells with minimal light interaction and high-speed volumetric tracking in flow cytometry, the holograms generated with a limited photon budget suffer from poor pattern visibility. While it is possible to make use of photon-counting detectors to improve the hologram quality, the long recording procedure coupled with the need for mechanical scanning means that real-time extremely low light holographic imaging remains a formidable challenge. Here, we develop a snapshot DH that can operate at an ultra-low photon level (less than one photon per pixel). This is achieved by leveraging a quanta image sensor to capture a stack of binary holographic frames and then computationally reconstructing the wavefront  through integrating the mathematical imaging model and the data-driven processing, an approach that we termed PSHoloNet. The robustness and versatility of our DH system are demonstrated on both synthetic and experimental holograms with two common DH tasks, namely, particles volumetric reconstruction and phase imaging. Our results demonstrate that it is possible to expand DH to the photon-starved regime, and our method will enable more advanced holography applications in various scientific imaging systems.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--    </div>-->
+<!--  </div>-->
 </section>
 <!-- End paper abstract -->
 
@@ -166,9 +182,9 @@
       <div class="columns has-text-justified">
 
           <div class="column ">
-            <h2 class="title is-3">Optical system</h2>
+            <h2 class="title is-2 has-text-centered">Optical system</h2>
             <p>
-              The Gabor holographic imaging setup together with a quanta image sensor (QIS) as the recording device is designed. Among various photon-counting image sensors reported over the past decade, QIS stands out with its small pixel size (e.g. $\leq 1um$), high photon detection efficiency, and ultra-low readout noise. This leads to various applications in the low quanta flux regimes including security, night vision, quantum computing. In this work, for the first time, it is integrated into a coherent imaging system.
+              The Gabor holographic imaging setup together with a quanta image sensor (QIS) as the recording device is designed. Among various photon-counting image sensors reported over the past decade, QIS stands out with its small pixel size (e.g.<math display="inline"><mo>≤</mo><mn>1</mn><mi>μ</mi><mi>m</mi></math>), high photon detection efficiency, and ultra-low readout noise. This leads to various applications in the low quanta flux regimes including security, night vision, quantum computing. In this work, for the first time, it is integrated into a coherent imaging system.
             </p>
             <img src="static/images/optical_system.png" class="image is-center" alt="MY ALT TEXT"/>
           </div>
@@ -180,14 +196,14 @@
 
 
 <!-- Image carousel -->
-<section class="hero is-small is-white">
+<section class="hero is-small is-light">
   <div class="hero-body ">
 
     <div class="container is-max-desktop">
-      <h2 class="title">Physics-informed network</h2>
+      <h2 class="title is-2 has-text-centered">Physics-informed network</h2>
       <div class="content has-text-justified">
         <p>
-          In this work, we designed a physics-informed wavefront reconstruction network called PSHoloNetTo reconstruct the object wavefront information from the QIS recordings. To demonstrate the feasibility through synthetic experiments, we show two DH applications, namely, 3D particles volumetric reconstruction and phase imaging.
+          In this work, we designed a physics-informed wavefront reconstruction network called PSHoloNet to reconstruct the object wavefront information from the QIS recordings. To demonstrate the feasibility through synthetic experiments, we show two DH applications, namely, 3D particles volumetric reconstruction and phase imaging.
         </p>
       <div id="network-structure" class="carousel results-carousel is-light">
         <div class="item ">
@@ -278,7 +294,8 @@
   volume={8},
   number={5},
   pages={056106},
-  year={2023}
+  year={2023},
+  month = {May}
 }</code></pre>
     </div>
 </section>
