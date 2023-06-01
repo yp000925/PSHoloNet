@@ -10627,7 +10627,7 @@ a.has-text-danger-dark:focus, a.has-text-danger-dark:hover {
     color: #0a0a0a
 }
 
-.hero.is-white a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current), .hero.is-white strong {
+.hero.is-white not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current), .hero.is-white strong {
     color: inherit
 }
 

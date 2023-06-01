@@ -72,6 +72,7 @@ body {
 
 .publication-authors a {
    color: hsl(204, 86%, 53%) !important;
+
 }
 
 .publication-authors a:hover {
@@ -110,6 +111,10 @@ body {
 .publication-body img {
 }
 
+.publication-media{
+    color: hsl(204, 86%, 53%);
+    text-decoration: underline;
+}
 .results-carousel {
   overflow: hidden;
 }
