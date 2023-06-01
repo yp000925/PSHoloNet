@@ -141,19 +141,14 @@
 <!--</section>-->
 <!--&lt;!&ndash; End teaser video &ndash;&gt;-->
 <section class="section hero is-white">
-
   <div class="container is-max-desktop">
-
     <video poster="" id="illustration" autoplay muted loop height="200%">
       <source src="static/videos/illuatration.mov" type="video/mp4">
     </video>
-    <div class="content ">
-      <h3><i>See beyond the limits of conventional holographic imaging!</i></h3>
-    </div>
     <div class="content has-text-justified">
-
       <p>
-        To push the capability of DH to extremely low photon flux situations, i.e., one photon per pixel or lower, we consider a new hologram formation mechanism with single-photon detection. It opens new possibilities for more advanced holography applications in situations such as probing live cells with minimal light interaction and high-speed volumetric tracking in flow cytometry, where the holograms suffer from poor pattern visibility. This work has been highlighted as a <a class="publication-media" href="https://doi.org/10.1063/10.0019363">Scilight</a> in the May 2023 issue of APL Photonics.
+        To push the capability of DH to extremely low photon flux situations, i.e., one photon per pixel or lower, we consider a new hologram formation mechanism with single-photon detection. It leverages a <em>quanta image sensor (QIS)</em> to capture a stack of binary holographic frames and a physics-informed computational reconstruction algorithm, an approach that we termed <em>PSHoloNet</em>. This facilitates more advanced holography applications in situations when the scarcity of photons is essential and unavoidable. <br>
+        * This work has been highlighted as a <a class="publication-media" href="https://doi.org/10.1063/10.0019363">Scilight</a> in the May 2023 issue of APL Photonics
       </p>
     </div>
   </div>
@@ -163,13 +158,13 @@
 <section class="section hero is-light">
   <div class="container is-max-desktop">
 <!--  <div class="hero-body">-->
-    <h2 class="title is-2 has-text-centered">Overview</h2>
+    <h2 class="title is-2 has-text-centered">Abstract</h2>
 <!--    <video poster="" id="illustration" autoplay muted loop height="200%">-->
 <!--      <source src="static/videos/illuatration.mov" type="video/mp4">-->
 <!--    </video>-->
     <div class="content has-text-justified">
       <p>
-        We made improvements to both the hardware and algorithm aspects. We demonstrate its feasibility on two common DH tasks, namely, particles volumetric reconstruction and phase imaging, under photon starved situations.
+        Digital holography (DH) is a powerful imaging modality that is capable of capturing the object wavefront information, making it very valuable for diverse scientific research applications. Generally, it requires ample illumination to enable good fringe visibility and a sufficient signal-to-noise ratio. As such, in situations such as probing live cells with minimal light interaction and high-speed volumetric tracking in flow cytometry, the holograms generated with a limited photon budget suffer from poor pattern visibility. While it is possible to make use of photon-counting detectors to improve the hologram quality, the long recording procedure coupled with the need for mechanical scanning means that real-time extremely low light holographic imaging remains a formidable challenge. Here, we develop a snapshot DH that can operate at an ultra-low photon level (less than one photon per pixel). This is achieved by leveraging a quanta image sensor to capture a stack of binary holographic frames and then computationally reconstructing the wavefront  through integrating the mathematical imaging model and the data-driven processing, an approach that we termed PSHoloNet. The robustness and versatility of our DH system are demonstrated on both synthetic and experimental holograms with two common DH tasks, namely, particles volumetric reconstruction and phase imaging. Our results demonstrate that it is possible to expand DH to the photon-starved regime, and our method will enable more advanced holography applications in various scientific imaging systems.
       </p>
     </div>
   </div>
@@ -179,26 +174,15 @@
   <!-- Optical system design -->
 <section class="section hero is-white">
     <div class="container is-max-desktop">
+      <div class="columns has-text-justified">
 
-
-
-            <h3 class="title is-3 has-text-centered">Optical system</h3>
-           <p>
-             For the first time, a quanta image sensor (QIS) is integrated into the traditional inline holographic setup as we used in our previous work [1], which is a newly developed image sensor with photon-number-resolving capability. It captures a stack of binary holographic frames created by limited photons with Poisson statistics. Among various photon-counting image sensors reported over the past decade, QIS stands out with its small pixel size (e.g.<math display="inline"><mo>≤</mo><mn>1</mn><mi>μ</mi><mi>m</mi></math>),high photon detection efficiency, and ultra-low readout noise. For a comprehensive introduction to QIS, please refer to the review paper [2,3].
-           </p>
-<!--            <img src="static/images/optical_system.png" class="image is-center" alt="MY ALT TEXT"/>-->
-
-
-        <div id="optic-setup" class="carousel results-carousel is-light">
-          <div class="item ">
-            <img src="static/images/physical_sketch.png" class="image is-small" alt="MY ALT TEXT"/>
+          <div class="column ">
+            <h2 class="title is-2 has-text-centered">Optical system</h2>
+            <p>
+              The Gabor holographic imaging setup together with a quanta image sensor (QIS) as the recording device is designed. Among various photon-counting image sensors reported over the past decade, QIS stands out with its small pixel size (e.g.<math display="inline"><mo>≤</mo><mn>1</mn><mi>μ</mi><mi>m</mi></math>), high photon detection efficiency, and ultra-low readout noise. This leads to various applications in the low quanta flux regimes including security, night vision, quantum computing. In this work, for the first time, it is integrated into a coherent imaging system.
+            </p>
+            <img src="static/images/optical_system.png" class="image is-center" alt="MY ALT TEXT"/>
           </div>
-
-          <div class="item ">
-            <h4 class="subtitle has-text-centered">Backbone Structure</h4>
-            <img src="static/images/physical_setup_withN.png" class="image is-small" alt="MY ALT TEXT"/>
-          </div>
-        </div>
 
       </div>
     </div>
@@ -211,11 +195,11 @@
   <div class="hero-body ">
 
     <div class="container is-max-desktop">
-      <h3 class="title is-3 has-text-centered">Physics-informed network</h3>
+      <h2 class="title is-2 has-text-centered">Physics-informed network</h2>
       <div class="content has-text-justified">
-       <p>
-         Integrating QIS in DH is not a trivial task, due to its binary signal detection mechanism and very different noise characteristics, which would require specifically designed reconstruction algorithms. In this work, we designed a physics-informed wavefront reconstruction network called PSHoloNet to reconstruct the object wavefront information from the QIS recordings. It is an unrolled network with task-oriented blocks and loss function. To demonstrate the feasibility through synthetic experiments, we show two DH applications, namely, 3D particle volumetric reconstruction and phase imaging. Please refer to the paper for more details.
-       </p>
+        <p>
+          In this work, we designed a physics-informed wavefront reconstruction network called PSHoloNet to reconstruct the object wavefront information from the QIS recordings. To demonstrate the feasibility through synthetic experiments, we show two DH applications, namely, 3D particles volumetric reconstruction and phase imaging.
+        </p>
       <div id="network-structure" class="carousel results-carousel is-light">
         <div class="item ">
           <h4 class="subtitle has-text-centered">Network Unrolling</h4>
